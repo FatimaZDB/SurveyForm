@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link href="CSS/estilo.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="title">BeWebDeveloper Survey Form</h1><hr>
+        <p id="description">Thank you for taking the time to complete the survey form.</p>
+    </header>
+
+    <form id="survey-form" action="#" method="POST">
+        <label for="name" id="name-label">Name: </label>
+        <input type="text" name="name" id="name" class="input-tab" placeholder="Enter your name"><br>
+
+        <label for="email" id="email-label">Email:</label>
+        <input type="email" name="email" id="email" class="input-tab" placeholder="Enter your email" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required><br>
+       
+        <label for="number" id="number-label">Age:</label>
+        <input type="number" name="age" id="number" class="input-tab" placeholder="Age" min="10" max="100"> <br>
+        
+        <label for="dropdown" id="dropdown-label">Which option best describes your current role?</label>
+        <div class="input-tab">
+        <select name="role" id="dropdown">
+            <option value="" selected>Select an option:</option>
+            <option value="student">Student</option>
+            <option value="job">Full Time Job</option>
+            <option value="learner">Full Time Learner</option>
+            <option value="preferNo">Prefer not to say</option>
+            <option value="other">Other</option>
+        </select>
+        </div><br>
+
+        <label for="buttons" id="interests-label">What type of web development are you interested in? </label>
+            <div class="input-tab">
+            <input type="radio" id="buttons" name="interests" value="full-stack">Full stack web developer<br>
+            <input type="radio" id="buttons" name="interests" value="front-end">Front-end web developer<br>
+            <input type="radio" id="buttons" name="interests" value="back-end">Back-end web developer
+        </div>
+   
+        <br>
+    
+        <label for="technologies" id="technologies-label">Skills that you would like to receive information about? (Check all that apply) </label>
+        <div class="input-tab">
+            <input type="checkbox" id="technologies" name="technology areas" value="HTML">HTML5<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="CSS">CSS3<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="JavaScript">JavaScript<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="JQuery">JQuery<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="Bootstrap">Bootstrap<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="Python">Python<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="PHP">PHP<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="AngularJS">AngularJS<br>
+            <input type="checkbox" id="technologies" name="technology areas" value="Node.js">Node.js<br>
+        </div>
+
+        <label for="textarea" id="textarea-label">Any comments or suggestions? </label>
+        <div class="input-tab">
+        <textarea id="textarea" placeholder="Enter your comment here..." rows="5" cols="50"></textarea>
+        </div><br>
+        <div class="button-area">
+        <button type="submit" form="survey-form" id="submit_button" value="Submit">Submit</button>
+        </div>
+   </form>
+   <br>
+   <footer>Created by @FatimaZDB for freeCodeCamp</footer>
+
+</body>
+</html>
